@@ -1,0 +1,18 @@
+<div class="game_form">
+
+    <h1> Create a Game Listing </h1>
+
+
+    <form action='/games' method="POST">
+        Game Name: <br>
+        <br>
+        Release Date: <input name="release_date" value="<%= Time.now.strftime("%m/%d/%Y") %>"><br>
+        <br>
+        Thoughts on Game: <input type=text name="game_thoughts"><br>
+        <br>           
+            <br>
+            <br>
+        <input type=submit>
+    <form>
+
+</div>

@@ -20,7 +20,7 @@ class ApplicationController < Sinatra::Base
 
   get '/menu' do 
     @menu_items = MenuItem.all
-    erb :'/menu_items/show'
+    erb :'/list_items/show'
   end 
 
 

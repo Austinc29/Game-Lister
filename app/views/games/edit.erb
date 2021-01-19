@@ -1,0 +1,8 @@
+<h1> This is the Game Edit form </h1>
+
+<form action="/orders/<%= @order.id %>" method="post">
+    <input id="hidden" type="hidden" name="_method" value="patch">
+    Name: <input type=text value="<%= @game.name %>" name="name">
+    Release Date: <input type=text value="<%= @game.date %>" name="date">
+    <input type=submit>
+<form>
