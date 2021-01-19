@@ -1,23 +1,49 @@
 <div class="container">
-  <header><img src="images/corneal-small.png" class="img-responsive main-image"></header>
-  <div class="col-md-8 col-md-offset-2">
-    <h2>Sinatra Template Default Page</h2>
 
-    <div class="content">
-      <p>Welcome to the Sinatra Template! If you're seeing this page, then everything is working
-      as expected. To get started, delete this file (<code>app/views/welcome.erb)</code> and begin adding
-      your own actions to <code>application_controller.rb</code>. For more information, see the <a href="https://github.com/thebrianemory/corneal">README</a>.</p>
-    </div>
+  <h1 class="welcome_title"> Game Lister </h1>
+  <img class="welcome_img" src="/images/andras-vas-IQ2a48CrN7E-unsplash (1).jpg" alt="welcome img"/>
 
-    <div class="sidebar">
-      <h3>Environment</h3>
-      <ul>
-        <li><b>Ruby:</b> <%= RUBY_VERSION %></li>
-        <li><b>Environment:</b> <%= ENV["RACK_ENV"] %></li>
-        <li><b>Server:</b> <%= @env["SERVER_SOFTWARE"] %></li>
-        <li><b>Port:</b> <%= @env["SERVER_PORT"] %></li>
-      </ul>
-    </div>
-
-  </div>
+  <a href="/users/signup">Sign Up!</a>
+  <a href="/users/login"> Login </a>
 </div>
+
+
+<style>
+
+  .container {
+    margin-top: 100px;
+    margin-bottom: 100px;
+
+  }
+  .welcome_title {
+    color: #black;
+    border: 2px #869089;
+    outline-style: inset;
+    outline-color: #black;
+    outline-width: medium;
+    text-align: center;
+    margin-left: 20%;
+    margin-right: 20%;
+    font-size: 50px;
+
+  }
+
+  .welcome_img {
+    height: 65%;
+    width: 65%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  a {
+    display:block;
+    text-align:center;
+    margin-top: 25px;
+  }
+
+  body {
+      background-color: grey;
+  }
+
+</style>

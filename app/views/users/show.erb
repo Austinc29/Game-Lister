@@ -1,0 +1,14 @@
+Welcome, <%= @user.username %><br>
+<br>
+<br>
+Games(<%= @user.games.count %>)<br>
+<br >
+<% @user.games.each do |game| %>
+    Game Title: <%= title.id %><br>
+    Game Release: <%= release.id %><br>
+    Thoughts On Game: <%= thoughts.id %><br>
+    <br>
+    <br>
+<% end %>
+<br>
+<br>

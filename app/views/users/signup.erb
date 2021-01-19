@@ -1,0 +1,63 @@
+<div class="signup">
+
+    <div class="flash_alert">
+        <% if flash[:alert] %>
+        <%= flash[:alert] %>
+        <% end %>
+    </div>
+
+
+    <h1> Create Account </h1>
+
+    <form action='/users/signup' method="POST">
+        <label> First Name* </label>
+            <input type=text name="first_name"><br>
+        <label> Last Name* </label>
+            <input type=text name="last_name"><br>
+        <label> Username* </label>
+            <input type=text name="username"><br>
+        <label> Email* </label>
+            <input type=text name="email"><br>
+        <label> Password* </label>
+            <input type=password name="password"><br>
+        <label> Password Confirmation* </label>
+            <input type=password name="password_confirmation"><br>     
+        <br>
+        <input type=submit value="Sign Up"><br>
+    <form>
+</div>
+
+
+<style>
+
+    body {
+        background-color: grey;
+    }
+    .signup {
+        text-align: block;
+        margin-top: 10%;
+        margin-bottom: 20%;
+        margin-left: 35%;
+        padding-bottom: 5%;
+        border: 2px solid black; 
+        border-radius: 10px;
+        padding: 50px;
+        width: 20%;
+        height: 20%;
+    }
+
+    .signup input{
+        border: 2px solid black; 
+        margin-bottom: 15px;
+        margin-top: 5px;
+        float: center;
+        width: 100%;
+    }
+
+    .signup .flash_alert{
+        color: red;
+    }
+
+ 
+
+</style>
