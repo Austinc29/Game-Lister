@@ -11,17 +11,16 @@ class GameController < ApplicationController
 
     post '/games' do 
         @game = Game.create(
-            order_date: params[:order_date], 
-            food_item: params[:food_item], 
-            quantity: params[:quantity],
-            total: params[:item_price].to_i * params[:quantity].to_i
+            title: params[:title], 
+            release_date: params[:release_date], 
+            description: params[:description]
         )
         current_user.games << @game 
         redirect "/games/#{@game.id}"
     end 
 
     get '/games/:id' do 
-        @games = Game.find(params[:id])
+        @game = Game.find(params[:id])
         erb :'/games/show'
     end 
 
@@ -38,10 +37,9 @@ class GameController < ApplicationController
     post '/games/:id' do 
         @game = Game.find(params[:id])
         @game.update(
-            address: params[:address], 
-            item: params[:item], 
-            item_price: params[:item_price], 
-            total: params[:total]
+            title: params[:title], 
+            release_date: params[:release_date], 
+            description: params[:description]
         )
         redirect "/games/#{@game.id}"
     end 

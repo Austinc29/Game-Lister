@@ -1,10 +1,10 @@
-<div class="List">
+<div class="list">
     <h1> Your Game List! </h1>
 
 
     <% @list_items.each do |i| %>
-        <%= i.item %><br>
+        <%= i.title %><br>
+        <%= i.release_date %><br>
         <%= i.description %><br>
-        $<%= i.price %><br>
     <% end %>
 </div>
