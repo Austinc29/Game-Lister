@@ -4,7 +4,7 @@ class GameController < ApplicationController
         if logged_in?
             erb :'/games/new'
         else 
-            flash[:alert] = "Please login to place an order"
+            flash[:alert] = "Please login to create a game post"
             redirect "/users/login"
         end 
     end 
