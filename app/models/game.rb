@@ -1,4 +1,4 @@
 class Game < ActiveRecord::Base
-    has_many :title
+    attr_accessor :title, :release_date, :description
     belongs_to :user
 end

@@ -1,6 +1,6 @@
-Game Title: <%= @game.title %><br>
-Game Release: <%= @release.release_date.strftime("%m/%d/%Y") %><br>
-Thoughts On Game: <%= @game.description %><br>
+Title: <%= @game.title %><br>
+Release: <%= @game.try(:release_date).try(:strftime, '%m/%d/%Y') %><br>
+Description: <%= @game.description %><br>
 
 <form method="post" action="/games/<%= @game.id %>">
   <input id="hidden" type="hidden" name="_method" value="DELETE">

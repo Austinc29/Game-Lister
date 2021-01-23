@@ -1,10 +1,11 @@
+require 'pry'
 class GameController < ApplicationController
 
     get '/games/new' do 
         if logged_in?
             erb :'/games/new'
         else 
-            flash[:alert] = "Please login to create a game post"
+            flash[:alert] = "Please login to post a game"
             redirect "/users/login"
         end 
     end 
@@ -15,9 +16,9 @@ class GameController < ApplicationController
             release_date: params[:release_date], 
             description: params[:description]
         )
-        current_user.games << @game 
+        current_user.games << @game
         redirect "/games/#{@game.id}"
-    end 
+    end  
 
     get '/games/:id' do 
         @game = Game.find(params[:id])

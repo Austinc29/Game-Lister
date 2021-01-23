@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 3) do
   end
 
   create_table "list_items", force: :cascade do |t|
-    t.string "name"
+    t.string "title"
     t.string "release_date"
     t.string "description"
   end
