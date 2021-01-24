@@ -20,7 +20,7 @@ class ApplicationController < Sinatra::Base
 
   get '/list' do 
     @list_items = ListItem.all
-    erb :'/list_items/show'
+    erb :'/list_items/show_list'
   end 
 
 
