@@ -14,7 +14,8 @@ class GameController < ApplicationController
         @game = Game.create(
             title: params[:title], 
             release_date: params[:release_date], 
-            description: params[:description]
+            description: params[:description],
+            user_id: params[:user_id]
         )
         current_user.games << @game
         redirect "/games/#{@game.id}"
@@ -22,7 +23,7 @@ class GameController < ApplicationController
 
     get '/games/:id' do 
         @game = Game.find(params[:id])
-        erb :'/games/show'
+        erb :'/games/show_game'
     end 
 
     get '/games' do 

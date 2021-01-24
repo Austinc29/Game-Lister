@@ -1,5 +1,5 @@
-Title: <%= @game.title %><br>
-Release Date: <%= @game.try(:release_date).try(:strftime, '%B %e, %Y') %><br>
+Title: <%= @game.title%><br>
+Release Date: <%= @game&.release_date&.strftime('%B %e, %Y') %><br>
 Description: <%= @game.description %><br>
 
 <form method="post" action="/games/<%= @game.id %>">
